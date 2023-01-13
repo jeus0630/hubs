@@ -32,7 +32,7 @@ jobs:
         env:
           CORS_PROXY_SERVER: https://cors.dev.xrcloud.belivvr.com
           BASE_ASSETS_PATH: https://assets-test.dev.xrcloud.belivvr.com/hubs/
-          RETICULUM_SERVER: https://reticulum.dev.xrcloud.belivvr.com
+          RETICULUM_SERVER: https://reticulum-test.dev.xrcloud.belivvr.com
           THUMBNAIL_SERVER: https://nearspark.xrcloud.belivvr.com
           NON_CORS_PROXY_DOMAINS: hubs.local,stage.reticulum.io,hubs-upload-cdn.com,hubs.belivvr.com,hubs-alpha.belivvr.com,assets.stage.xrcloud.belivvr.com,assets-test.dev.xrcloud.belivvr.com,reticulum.stage.xrcloud.belivvr.com,reticulum.dev.xrcloud.belivvr.com
           MEDIA_SERVER: https://reticulum.dev.xrcloud.belivvr.com
