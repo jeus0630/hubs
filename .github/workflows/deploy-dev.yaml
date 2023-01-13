@@ -31,10 +31,10 @@ jobs:
         run: yarn build
         env:
           CORS_PROXY_SERVER: https://cors.dev.xrcloud.belivvr.com
-          BASE_ASSETS_PATH: https://assets.dev.xrcloud.belivvr.com/hubs/
+          BASE_ASSETS_PATH: https://assets-test.dev.xrcloud.belivvr.com/hubs/
           RETICULUM_SERVER: https://reticulum.dev.xrcloud.belivvr.com
           THUMBNAIL_SERVER: https://nearspark.xrcloud.belivvr.com
-          NON_CORS_PROXY_DOMAINS: hubs.local,stage.reticulum.io,hubs-upload-cdn.com,hubs.belivvr.com,hubs-alpha.belivvr.com,assets.stage.xrcloud.belivvr.com,assets.dev.xrcloud.belivvr.com,reticulum.stage.xrcloud.belivvr.com,reticulum.dev.xrcloud.belivvr.com
+          NON_CORS_PROXY_DOMAINS: hubs.local,stage.reticulum.io,hubs-upload-cdn.com,hubs.belivvr.com,hubs-alpha.belivvr.com,assets.stage.xrcloud.belivvr.com,assets-test.dev.xrcloud.belivvr.com,reticulum.stage.xrcloud.belivvr.com,reticulum.dev.xrcloud.belivvr.com
           MEDIA_SERVER: https://reticulum.dev.xrcloud.belivvr.com
 
       - name: Deploy S3
@@ -42,8 +42,8 @@ jobs:
         with:
           args: --acl public-read --follow-symlinks
         env:
-          AWS_S3_BUCKET: assets.dev.xrcloud.belivvr.com/hubs
+          AWS_S3_BUCKET: assets-test.dev.xrcloud.belivvr.com/hubs
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.A`WS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'ap-northeast-2'
           SOURCE_DIR: 'dist'
